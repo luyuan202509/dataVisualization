@@ -2,7 +2,7 @@ from random import choice
 
 class RandomWalk():
     ''' 一个生成随机漫步数据的类,本质产生两个两个(x,y) 的列表'''
-    def __init__(self,num_points= 5000):
+    def __init__(self,num_points= 50000):
         self.num_points = num_points
         self.x_values = [0]
         self.y_values = [0]
