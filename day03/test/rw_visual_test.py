@@ -6,6 +6,8 @@
 import matplotlib.pyplot as plt 
 from random_walk import RandomWalk
 
+plt.figure(figsize=(14,8))
+
 rw = RandomWalk(5000)
 rw.fill_walk()
 #plt.scatter(rw.x_values,rw.y_values,s =15)
