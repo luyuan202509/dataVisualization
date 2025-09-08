@@ -1,5 +1,4 @@
 from importlib import readers
-from logging import exception
 from matplotlib import pyplot as plt 
 import csv 
 from  pathlib import Path
