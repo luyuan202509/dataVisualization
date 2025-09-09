@@ -49,7 +49,8 @@ fig = px.scatter(
            size_max=10,
            color= '震级',
            #查看可用渐变名 print(px.colors.named_colorscales())
-           color_continuous_scale='edge'  # 或 'Turbo'、'Plasma'、'' 等
+           color_continuous_scale='Plasma',  # 或 'Turbo'、'Plasma'、'' 等
+           hover_name = '位置'
 )
 
 html_path = parent_path / 'html'
