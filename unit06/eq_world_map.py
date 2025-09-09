@@ -30,7 +30,7 @@ for eq_dict in all_eq_dicts:
 
 data  = pd.DataFrame(
     data = zip(lons,lats,titles,mags),
-    columns= ['经度','纬度','位置','震极']
+    columns= ['经度','纬度','位置','震级']
 )
 
 fig = px.scatter(
@@ -42,6 +42,8 @@ fig = px.scatter(
            width= 800,
            height= 800,
            title= '全球地震散点图',
+           size= '震级',
+           size_max=10
 )
 
 html_path = parent_path / 'html'
