@@ -6,7 +6,7 @@ from datetime import datetime
 scvPath = Path(__file__).resolve().parent / 'weather_data'
 
 path1 = Path(scvPath / 'sitka_weather_2021_simple.csv')
-lines = path1.read_text().splitlines()
+lines = path1.read_text(encoding='utf-8').splitlines()
 
 reader = csv.reader(lines)
 #跳过表头
