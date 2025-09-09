@@ -1,6 +1,7 @@
 import json 
 from pathlib import Path
 import plotly.express  as px
+import pandas as pd
 
 parent_path =  Path(__file__).resolve().parent
 
@@ -27,9 +28,15 @@ for eq_dict in all_eq_dicts:
     lons.append(lon)
     lats.append(lat)
 
-fig = px.scatter(x =lons,
-           y=lats,
-           labels={'x':'经度','y':'纬度'},
+data  = pd.DataFrame(
+    data = zip(lons,lats,titles,mags),
+    columns= ['经度','纬度','位置','震极']
+)
+
+fig = px.scatter(
+           data,
+           x='经度',
+           y='纬度',
            range_x = [-200,200],
            range_y=[-90,90],
            width= 800,
