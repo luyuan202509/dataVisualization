@@ -9,7 +9,10 @@ data_path = parent_path / 'eq_data'
 file = data_path / 'eq_data_30_day_m1.geojson'
 
 # 将数据作为字符串读取并转换为 Python 对象
-contents =  file.read_text(encoding='utf-8')
+try:
+    contents =  file.read_text()
+except:
+    contents =  file.read_text(encoding='utf-8')
 all_eq_datas = json.loads(contents)
 #print(all_eq_data)
 
