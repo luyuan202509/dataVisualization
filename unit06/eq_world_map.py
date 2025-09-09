@@ -6,7 +6,7 @@ import pandas as pd
 parent_path =  Path(__file__).resolve().parent
 
 data_path = parent_path / 'eq_data'
-file = data_path / 'eq_data_1_day_m1.geojson'
+file = data_path / 'eq_data_30_day_m1.geojson'
 
 # 将数据作为字符串读取并转换为 Python 对象
 contents =  file.read_text(encoding='utf-8')
@@ -43,7 +43,8 @@ fig = px.scatter(
            height= 800,
            title= '全球地震散点图',
            size= '震级',
-           size_max=10
+           size_max=10,
+           color= '震级'
 )
 
 html_path = parent_path / 'html'
