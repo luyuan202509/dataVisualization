@@ -47,7 +47,9 @@ fig = px.scatter(
            title= '全球地震散点图',
            size= '震级',
            size_max=10,
-           color= '震级'
+           color= '震级',
+           #查看可用渐变名 print(px.colors.named_colorscales())
+           color_continuous_scale='edge'  # 或 'Turbo'、'Plasma'、'' 等
 )
 
 html_path = parent_path / 'html'
