@@ -34,5 +34,6 @@ fig.update_layout(title_x = 0.5,
                   xaxis_title = 24,
                   yaxis_title = 24,
                   )
+fig.update_traces(marker_color = 'rgb(60,100,150)',marker_opacity = 0.6)
 
 fig.show()
