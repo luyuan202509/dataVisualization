@@ -1,3 +1,4 @@
+from plotly.graph_objs.layout import xaxis
 import requests as req
 import plotly.express as px
 
@@ -17,5 +18,13 @@ for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
     stars.append(float(repo_dict['stargazers_count']))
 
-fig = px.bar(x = names,y = stars)
+title = '"Most-Starred Python Projects on GitHub'
+labels = {'x': 'Repository', 'y': 'Stars'}
+fig = px.bar(x = names,y = stars,title = title,labels = labels)
+fig.update_layout(title_x = 0.5,
+                  title_font_size = 28, 
+                  xaxis_title = 24,
+                  yaxis_title = 24,
+                  )
+
 fig.show()
