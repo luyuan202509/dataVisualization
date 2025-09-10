@@ -1,4 +1,3 @@
-from shutil import which
 import matplotlib.pyplot as plt
 '''绘制散点图'''
 plt.scatter(2,4,s = 200)
