@@ -23,7 +23,8 @@ print(frequencies)
 # 进行格式化
 hist = pygal.Bar()
 hist.title = "Results of rolling one D6 1000 times"
-hist.x_lable = [1,2,3,4,5,6]
+#hist.x_lable = [1,2,3,4,5,6]
+hist.x_lable = list(range(die.num_size))
 
 hist.x_title = "Result"
 hist.y_title = "Frequency of Result"
